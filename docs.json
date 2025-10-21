@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Lookfor: AI CX Platform for Shopify",
   "colors": {
     "primary": "#6d28d9",
     "light": "#8b5cf6",
