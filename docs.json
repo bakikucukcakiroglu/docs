@@ -36,10 +36,34 @@
           {
             "group": "Channels",
             "pages": [
-              "channels/storefront",
-              "channels/email",
-              "channels/instagram",
-              "channels/facebook"
+              {
+                "group": "Storefront",
+                "icon": "pencil",
+                "pages": [
+                  "channels/storefront"
+                ]
+              },
+              {
+                "group": "Email",
+                "icon": "pencil",
+                "pages": [
+                  "channels/email"
+                ]
+              },
+              {
+                "group": "Instagram",
+                "icon": "pencil",
+                "pages": [
+                  "channels/instagram"
+                ]
+              },
+              {
+                "group": "Facebook",
+                "icon": "pencil",
+                "pages": [
+                  "channels/facebook"
+                ]
+              }
             ]
           },
           {
