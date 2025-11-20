@@ -18,7 +18,7 @@
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "why-lookfor"
             ]
           },
           {
@@ -34,40 +34,12 @@
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Channels",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "channels/storefront",
+              "channels/email",
+              "channels/instagram",
+              "channels/facebook"
             ]
           }
         ]
@@ -90,7 +62,7 @@
   },
   "logo": {
     "light": "/logo/dark.png",
-    "dark": "/logo/dark.png"
+    "dark": "/logo/3.png"
   },
   "navbar": {
     "links": [

@@ -1,9 +1,7 @@
 ---
-title: "New file"
+title: "Tools"
 description: "Description of your new file."
 ---
-
-# **Tools**
 
 You can make your agents more powerful by adding tools to them. Tools let an Agent **take actions** – fetch data, call external APIs, execute code. Lookfor agents supports three categories of tools:
 
@@ -39,12 +37,16 @@ Let’s say you want to create a MAS that translates French and Turkish texts to
 
 You can add the French Translator Agent and the Turkish Translator Agent to the tool list of the Orchestrator Agent. When the Orchestrator Agent is called, it will run either/both of the agents based on the input like a tool. Let’s say half of the input is in French and half of the input is in Turkish. Orchestrator agent will run the French Translator Agent with the French part of the input and the Turkish Translator Agent with the Turkish part of the input. Translator agents will not have the conversation history. They will not know that they are a part of a MAS. They will think that they run solely for that input and will return the translated text. Orchestrator agent will return the result of the two agents, edit the text if needed, and return the final result as its output.
 
-
 <Note>
+  **Caution**\
   Aware that, when you use agent handoffs, the sub-agent will be able to see the [conversation history](https://docs.lookfor.ai/guides/agents#conversation-history). When you use agents as tools, the sub-agent will not be able to see the conversation history. It will think that it runs solely for that input.
 </Note>
 
-Output type of a MAS is pre-determined by the type of the MAS. So, any agent that is able to be a final agent in a MAS must have the same output type as the MAS. However, if an agent will only be used as a tool, or there is no possibility to be a final agent in a MAS (e.g. Triage Agent with `Tool Choice` set to `required`), you can set the output type of the agent.
+<Note>
+  **Caution**
+
+  Output type of a MAS is pre-determined by the type of the MAS. So, any agent that is able to be a final agent in a MAS must have the same output type as the MAS. However, if an agent will only be used as a tool, or there is no possibility to be a final agent in a MAS (e.g. Triage Agent with `Tool Choice` set to `required`), you can set the output type of the agent.
+</Note>
 
 ## **3. API tools**
 
