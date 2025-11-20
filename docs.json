@@ -86,8 +86,7 @@
               "use-cases/overview/templates"
             ]
           },
-
-          {
+           {
             "group": "Discovered Use Cases",
             "icon": "combine",
             "pages": [
@@ -126,19 +125,6 @@
                   "use-cases/discovered-use-cases/placeholder"
                 ]
               }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Use Cases",
-        "groups": [
-          {
-            "group": "Overview",
-            "icon": "search-check",
-            "pages": [
-              "use-cases/overview/introduction",
-              "use-cases/overview/templates"
             ]
           },
           {
@@ -200,6 +186,10 @@
       {
         "label": "Blog",
         "href": "https://www.lookfor.ai/blog"
+      },
+      {
+        "label": "Case Studies",
+        "href": "https://www.lookfor.ai/case-studies"
       }
     ],
     "primary": {
