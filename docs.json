@@ -38,28 +38,28 @@
             "pages": [
               {
                 "group": "Storefront",
-                "icon": "pencil",
+                "icon": "store",
                 "pages": [
                   "channels/storefront"
                 ]
               },
               {
                 "group": "Email",
-                "icon": "pencil",
+                "icon": "mail",
                 "pages": [
                   "channels/email"
                 ]
               },
               {
                 "group": "Instagram",
-                "icon": "pencil",
+                "icon": "instagram",
                 "pages": [
                   "channels/instagram"
                 ]
               },
               {
                 "group": "Facebook",
-                "icon": "pencil",
+                "icon": "facebook",
                 "pages": [
                   "channels/facebook"
                 ]
