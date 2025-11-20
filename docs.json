@@ -42,6 +42,7 @@
             "group": "Channels",
             "icon": "ethernet-port",
             "pages": [
+              "channels/introduction",
               {
                 "group": "Storefront",
                 "icon": "store",
@@ -74,46 +75,116 @@
           }
         ]
       },
-       {
-        "tab": "Templates",
+      {
+        "tab": "Use Cases",
         "groups": [
+          {
+            "group": "Overview",
+            "icon": "search-check",
+            "pages": [
+              "use-cases/overview/introduction",
+              "use-cases/overview/templates"
+            ]
+          },
 
           {
-            "group": "Channels",
-            "icon": "ethernet-port",
+            "group": "Discovered Use Cases",
+            "icon": "combine",
             "pages": [
               {
-                "group": "Storefront",
-                "icon": "store",
+                "group": "Support",
+                "icon": "hand-helping",
                 "pages": [
-                  "channels/storefront"
+                  "use-cases/discovered-use-cases/placeholder"
                 ]
               },
               {
-                "group": "Email",
-                "icon": "mail",
+                "group": "Sales",
+                "icon": "badge-dollar-sign",
                 "pages": [
-                  "channels/email"
+                  "use-cases/discovered-use-cases/placeholder"
                 ]
               },
               {
-                "group": "Instagram",
-                "icon": "instagram",
+                "group": "Retention",
+                "icon": "shield",
                 "pages": [
-                  "channels/instagram"
+                  "use-cases/discovered-use-cases/placeholder"
                 ]
               },
               {
-                "group": "Facebook",
-                "icon": "facebook",
+                "group": "Upsell",
+                "icon": "circle-fading-arrow-up",
                 "pages": [
-                  "channels/facebook"
+                  "use-cases/discovered-use-cases/placeholder"
+                ]
+              },
+              {
+                "group": "Review",
+                "icon": "star",
+                "pages": [
+                  "use-cases/discovered-use-cases/placeholder"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Use Cases",
+        "groups": [
+          {
+            "group": "Overview",
+            "icon": "search-check",
+            "pages": [
+              "use-cases/overview/introduction",
+              "use-cases/overview/templates"
+            ]
+          },
+          {
+            "group": "Example MAS",
+            "icon": "components",
+            "pages": [
+              {
+                "group": "Support",
+                "icon": "hand-helping",
+                "pages": [
+                  "use-cases/discovered-use-cases/placeholder"
+                ]
+              },
+              {
+                "group": "Sales",
+                "icon": "badge-dollar-sign",
+                "pages": [
+                  "use-cases/discovered-use-cases/placeholder"
+                ]
+              },
+              {
+                "group": "Retention",
+                "icon": "shield",
+                "pages": [
+                  "use-cases/discovered-use-cases/placeholder"
+                ]
+              },
+              {
+                "group": "Upsell",
+                "icon": "circle-fading-arrow-up",
+                "pages": [
+                  "use-cases/discovered-use-cases/placeholder"
+                ]
+              },
+              {
+                "group": "Review",
+                "icon": "star",
+                "pages": [
+                  "use-cases/discovered-use-cases/placeholder"
                 ]
               }
             ]
           }
         ]
       }
+      
     ]
   },
   "logo": {
