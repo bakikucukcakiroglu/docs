@@ -7,6 +7,9 @@
     "light": "#8b5cf6",
     "dark": "#4c1d95"
   },
+  "icons":{
+    "library": "lucide"
+  },
   "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
@@ -23,6 +26,7 @@
           },
           {
             "group": "Building Workflows",
+            "icon": "component",
             "pages": [
               "building-workflows/agents",
               "building-workflows/context",
@@ -45,7 +49,7 @@
               },
               {
                 "group": "Email",
-                "icon": "envelope",
+                "icon": "mail",
                 "pages": [
                   "channels/email"
                 ]
@@ -62,22 +66,6 @@
                 "icon": "facebook",
                 "pages": [
                   "channels/facebook"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Getting started",
-            "icon": "play",
-            "expanded": false,
-            "pages": [
-              "quickstart",
-              {
-                "group": "Editing",
-                "icon": "pencil",
-                "pages": [
-                  "installation",
-                  "editor"
                 ]
               }
             ]
