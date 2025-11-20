@@ -79,7 +79,7 @@ A Good Methodology: You can start with Express, and if the Agent is not able to 
 
 ## **Personalizing Responses with Context Variables**
 
-One powerful feature of agent instructions is the ability to include [**context variables**](https://docs.lookfor.ai/guides/context). Context variables are placeholders that the system will fill in with actual customer, shop, or session data at runtime. They let your AI personalize its output, making the conversation (or email) feel more natural and tailored to the individual customer.
+One powerful feature of agent instructions is the ability to include [**context variables**](/mas/context). Context variables are placeholders that the system will fill in with actual customer, shop, or session data at runtime. They let your AI personalize its output, making the conversation (or email) feel more natural and tailored to the individual customer.
 
 Here are a few commonly‑used variables you might see in **Storefront** or **Email** MAS:
 
@@ -90,7 +90,7 @@ Here are a few commonly‑used variables you might see in **Storefront** or **Em
 | `session.languageCode` | ISO code of visitor’s preferred language      | Multilingual greetings or answers      |
 | `store_status.isOpen`  | `true`/`false` if your physical store is open | Suggest visiting hours or local pickup |
 
-> **Full lists differ for each MAS**. Check the [Context guide](https://lookfor.ai/docs/guides/context) for every available variable in Storefront MAS, Email MAS, and future types.
+> **Full lists differ for each MAS**. Check the [Context](/mas/context) for every available variable in Storefront MAS, Email MAS, and future types.
 
 ### **How to use them in instructions**
 
@@ -122,7 +122,7 @@ Example (Orders Agent):
 
 > _When the shopper requests order tracking information, first ask for the order number and then use _**_GetOrderDetailsTool_**_ to pull order data before answering._ If the shopper doesn’t know their order number, ask their email and use **GetCustomerOrdersTool** to pull their order list. Then show them the list and ask them to select the order number.
 
-For the full, always‑up‑to‑date tool lists, visit the [Tools guide](https://lookfor.ai/docs/guides/tools).
+For the full, always‑up‑to‑date tool lists, visit the [Tools](/mas/tools).
 
 ## **Examples of Good Instructions**
 
@@ -159,8 +159,8 @@ By learning to write effective agent instructions, you’re practising _prompt e
 
 Ready to dive deeper? Explore:
 
-- The [Context guide](https://docs.lookfor.ai/guides/context) – all dynamic variables by MAS type.
-- The [Tools guide](https://docs.lookfor.ai/guides/tools) – every built‑in capability your agents can call.
-- The [MASs guide](https://docs.lookfor.ai/guides/multi-agent-systems) – feature comparison of Storefront, Email, Content, and Conversation Insights MAS.
+- The [Context guide](/mas/context) – all dynamic variables by MAS type.
+- The [Tools guide](/mas/tools) – every built‑in capability your agents can call.
+- The [MASs guide](/mas/introduction) – feature comparison of Storefront, Email, Content, and Conversation Insights MAS.
 
 Happy prompting – and happy selling!

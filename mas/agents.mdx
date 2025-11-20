@@ -1,27 +1,32 @@
 ---
 title: "Agents"
-description: "Description of your new file."
+description: "Learn the basics of AI agents "
 ---
 
-Agents are the main building‑blocks of a multi-agent system. Each agent is a proxy for an LLM. Each agent has a set of tools and context. Each agent can use these tools and context to complete its task. In short, LLM is the brain of the agent, tools are the hands and context is the eyes. Agents has the following parameters that you can configure:
+**Agents**, or **AI Agents**, are the fundamental building blocks of a [multi-agent system](/mas/introduction). Each agent acts as a dedicated proxy for an LLM. It comes with its own set of **tools** and **context**, allowing it to carry out a specific responsibility within the system. In this analogy, the **LLM is the agent’s brain**, the **tools are its hands**, and the **context is its eyes**—together enabling the agent to understand the situation and take the right actions.
 
-- **Name** – the name of the agent.
-- **Handoff Description** – a description of what the agent can do. This description is used to decide which agent to delegate to. So a handoff description informs the parent agent about the capabilities of the child agent.
-- [**Instructions**](https://docs.lookfor.ai/guides/prompt-engineeringg#what-are-agent-instructions) – the system prompt that tells the agent _who it is_ and _how it should respond_.
-- [**Handoff Agents**](https://docs.lookfor.ai/guides/handoffs) – a list of agents that the current agent can delegate to.
-- [**Tools**](https://docs.lookfor.ai/guides/tools) – a list of functions or APIs the model can invoke to accomplish a task. Depending on the type of the MAS, lookfor provides a set of useful tools for you to equip an agent of the MAS.
-- [**Model Settings**](https://docs.lookfor.ai/guides/models) - The model settings of the agent.
+<Frame>
+  To make this concrete, imagine you want to automate incoming customer emails for your store. After connecting your email account to Lookfor and creating an Email MAS, the next step is assembling your team of agents. Each agent focuses on a distinct topic area—order-related issues, product questions, wholesale inquiries, partnership requests, shipping problems, and more.
 
-<Note>
-  **Caution**
+  Order-related emails (cancellations, address changes, tracking updates, returns, refunds, etc.) are often the most critical. In this case, creating an **Orders Agent** is a natural choice. This agent can be equipped with tools such as **Get Customer Orders**, **Get Order Details**, **Cancel Order**, **Update Shipping Address**, and **Refund Order**, giving it everything it needs to resolve order-related requests end-to-end. To multiply the effect of this agent you can also crate a **Feedback Agent** who asks for reviews when a customer really happy with the outcome, or you got the confirmation about you fixed their problems.
 
-  LLMs [hallucinate](https://en.wikipedia.org/wiki/Hallucination_\(artificial_intelligence\)). This means that they may generate content that is not true to the facts or do not follow the instructions. [Writing Effective Agent Instructions](https://docs.lookfor.ai/guides/prompt-engineering) and [Following Single Responsibility Principle](https://docs.lookfor.ai/guides/single-responsibility) are powerful weapons to reduce hallucinations. Also the more intelligent the model, the less likely it is to hallucinate because it will understand the instructions better.
-</Note>
+  <Check>
+    [NATPAT](https://www.natpat.com), a high-growth global Shopify brand,  collects +100 positive reviews each month on [Truspilot ](https://www.trustpilot.com/review/naturalpatch.com)with a \*\*Feedback Agent. \*\*Read [How lookfor helped NATPAT to achieve 91% resolution rate](https://www.lookfor.ai/case-studies/how-natpat-uses-lookfor) for details.
+  </Check>
+</Frame>
 
-### **Why don’t lookfor configure agents for you?**
+### Creating agents
 
-Learning how to build multi-agent systems can be a bit scary at the beginning. Actually, they are very intuitive and easy to understand. As lookfor, we prepared everything for you. You just need to set up the MASs using our app. You may be wondering why we don’t configure agents for you. The reason is there are many different stores in Shopify. Each store has its own unique requirements. We can’t create a one-size-fits-all solution. Instead, what we provide is a framework and infrastructure that you can use to build and run your own MASs. This guide is a good starting point to learn how to build your own MASs but of course you can always ask us for help.
+You can create an agent by simply setting the following configurations
 
-## **Context**
+- **Name** – the name of the agent. You and LLM will see this name. 
+- **Icon** - Icon of the agent. It has no functional purpose but helps you identify the agent in dashboard.
+- **Handoff Description** – The description allowing an agent to inform it's parents about its capabilities and responsbilities. Parent reads description when it is on the duty and decides whether to handoff to this agent or not.
+- [**Instructions**](/mas/instructions#what-are-agent-instructions) – the system prompt that tells the agent _who it is_ and _how it should respond_. 
+- [**Handoff Agents**](/mas/handoffs) – a list of agents that the current agent can delegate to.
+- [**Tools**](/mas/tools) – a list of functions or APIs the model can invoke to accomplish a task. Depending on the [type of the MAS](/mas/introduction), lookfor provides a set of useful tools for you to equip an agent of the MAS.
+- [**Model Settings**](/mas/models) - The model settings of the agent. You can select the intelligence level, tool calling rules, and more.
 
-Agents are equipped with a set of context. Context is a set of variables that are available to the agent. To learn more about context, see the [context](https://docs.lookfor.ai/guides/context) guide.
+<Info>
+  Agents are equipped with a set of context. Context is a set of variables that are available to the agent. To learn more about context, see [context](/mas/context).
+</Info>
