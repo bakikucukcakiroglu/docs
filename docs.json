@@ -35,7 +35,15 @@
               "mas/handoffs",
               "mas/instructions",
               "mas/models",
-              "mas/tools"
+              {
+                "group": "Tools",
+                "pages": [
+                  "mas/tools/introduction",
+                  "mas/tools/built-in",
+                  "mas/tools/api",
+                  "mas/tools/mcp"
+                ]
+              }
             ]
           },
           {
