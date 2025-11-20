@@ -26,18 +26,58 @@
             ]
           },
           {
-            "group": "Building Workflows",
+            "group": "Multi-agent Systems (MAS)",
             "icon": "component",
             "pages": [
-              "building-workflows/agents",
-              "building-workflows/context",
-              "building-workflows/handoffs",
-              "building-workflows/instructions",
-              "building-workflows/models",
-              "building-workflows/tools",
-              "building-workflows/workflows"
+              "mas/introduction",
+              "mas/agents",
+              "mas/context",
+              "mas/handoffs",
+              "mas/instructions",
+              "mas/models",
+              "mas/tools"
             ]
           },
+          {
+            "group": "Channels",
+            "icon": "ethernet-port",
+            "pages": [
+              {
+                "group": "Storefront",
+                "icon": "store",
+                "pages": [
+                  "channels/storefront"
+                ]
+              },
+              {
+                "group": "Email",
+                "icon": "mail",
+                "pages": [
+                  "channels/email"
+                ]
+              },
+              {
+                "group": "Instagram",
+                "icon": "instagram",
+                "pages": [
+                  "channels/instagram"
+                ]
+              },
+              {
+                "group": "Facebook",
+                "icon": "facebook",
+                "pages": [
+                  "channels/facebook"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+       {
+        "tab": "Templates",
+        "groups": [
+
           {
             "group": "Channels",
             "icon": "ethernet-port",
@@ -87,7 +127,7 @@
         "href": "mailto:info@lookfor.ai"
       },
       {
-        "label": "blog",
+        "label": "Blog",
         "href": "https://www.lookfor.ai/blog"
       }
     ],
