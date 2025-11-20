@@ -22,10 +22,15 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "Building Workflows",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "building-workflows/agents",
+              "building-workflows/context",
+              "building-workflows/handoffs",
+              "building-workflows/instructions",
+              "building-workflows/models",
+              "building-workflows/tools",
+              "building-workflows/workflows"
             ]
           },
           {

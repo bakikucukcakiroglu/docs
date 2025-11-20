@@ -1,0 +1,27 @@
+---
+title: "New file"
+description: "Description of your new file."
+---
+
+# **Agents**
+
+Agents are the main building‑block of a multi-agent system. Each agent is a proxy for an LLM. Each agent has a set of tools and context. Each agent can use these tools and context to complete its task. In short, LLM is the brain of the agent, tools are the hands and context is the eyes. Agents has the following parameters that you can configure:
+
+- **Name** – the name of the agent.
+- **Handoff Description** – a description of what the agent can do. This description is used to decide which agent to delegate to. So a handoff description informs the parent agent about the capabilities of the child agent.
+- [**Instructions**](https://docs.lookfor.ai/guides/prompt-engineeringg#what-are-agent-instructions) – the system prompt that tells the agent _who it is_ and _how it should respond_.
+- [**Handoff Agents**](https://docs.lookfor.ai/guides/handoffs) – a list of agents that the current agent can delegate to.
+- [**Tools**](https://docs.lookfor.ai/guides/tools) – a list of functions or APIs the model can invoke to accomplish a task. Depending on the type of the MAS, lookfor provides a set of useful tools for you to equip an agent of the MAS.
+- [**Model Settings**](https://docs.lookfor.ai/guides/models) - The model settings of the agent.
+
+**Caution**
+
+LLMs [hallucinate](https://en.wikipedia.org/wiki/Hallucination_\(artificial_intelligence\)). This means that they may generate content that is not true to the facts or do not follow the instructions. [Writing Effective Agent Instructions](https://docs.lookfor.ai/guides/prompt-engineering) and [Following Single Responsibility Principle](https://docs.lookfor.ai/guides/single-responsibility) are powerful weapons to reduce hallucinations. Also the more intelligent the model, the less likely it is to hallucinate because it will understand the instructions better.
+
+### **Why don’t lookfor configure agents for you?**
+
+Learning how to build multi-agent systems can be a bit scary at the beginning. Actually, they are very intuitive and easy to understand. As lookfor, we prepared everything for you. You just need to set up the MASs using our app. You may be wondering why we don’t configure agents for you. The reason is there are many different stores in Shopify. Each store has its own unique requirements. We can’t create a one-size-fits-all solution. Instead, what we provide is a framework and infrastructure that you can use to build and run your own MASs. This guide is a good starting point to learn how to build your own MASs but of course you can always ask us for help.
+
+## **Context**
+
+Agents are equipped with a set of context. Context is a set of variables that are available to the agent. To learn more about context, see the [context](https://docs.lookfor.ai/guides/context) guide.

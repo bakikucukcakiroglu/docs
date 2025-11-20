@@ -1,0 +1,96 @@
+---
+title: "New file"
+description: "Description of your new file."
+---
+
+# **Handoffs**
+
+Agents are powerful on their own, but **handoffs** allow you to chain them into a collaborative system that solves complex tasks—this is what we call a [Multi-Agent System (MAS)](https://docs.lookfor.ai/guides/multi-agent-systems).
+
+In simple terms, a _handoff_ is when one agent delegates a task to another. This could happen when:
+
+- The parent agent completes its part of the task.
+- The task requires expertise the parent doesn’t have.
+
+A handoff does **not** skip the parent agent—it simply extends the workflow. Each agent is still expected to do its job before passing control to the next.
+
+> ℹ️ Internally, handoffs are implemented as **tools**.\
+> If you hand off to an agent named `Refund Agent`, the LLM sees a tool named `transfer_to_refund_agent`. This is why you can force a handoff by setting `Tool Choice` in [Model Settings](https://docs.lookfor.ai/guides/model-settings) to `required`.
+
+### **🧠 Example: A Content MAS**
+
+A common Content MAS might look like this:
+
+1. **Subject Finder Agent** uses a web search tool to identify trending topics.
+2. It **hands off** the subject to **Content Writer Agent**.
+3. Once written, the draft is handed to **Content Reviewer Agent**.
+4. After review, it’s passed to **Content Publisher Agent**, which uses a tool to publish the result.
+
+Every agent contributes to the final outcome. Handoffs allow coordination, not skipping.
+
+## **Why Use Handoffs?**
+
+| **Pattern**               | **When to Use**                                      | **Example**                                                                                          |
+| ------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Triage → Specialist**   | Route to the right expert from a central entry point | A _Triage Agent_ routes shipping questions to **ShippingAgent** and refund issues to **RefundAgent** |
+| **Escalation / Fallback** | Escalate gracefully or recover from failure          | If **OrderAgent** fails to find an order, it hands off to a human via **LiveAgent**                  |
+| **Workflow Step**         | Break down complex tasks into stages                 | **CollectorAgent** gathers input, then hands to **GeneratorAgent** for a custom quote                |
+
+✅ Handoffs reduce complexity by keeping each agent small, focused, and specialized—helping prevent hallucinations.
+
+## **How Handoffs Work Internally**
+
+Every handoff is a tool call. When the parent agent is running, it will automatically select(if needed) the child agent based on the handoff description. The child is able to see the results of tool calls of parent agents but the input to the child agent will be the same as the input to the parent agent. And the full control of the execution is now delegated to the child agent.
+
+## **Designing Great Handoff Descriptions**
+
+The **Handoff Description** is what helps the parent decide when to delegate. Think of it as a one-line job post for the child.
+
+**Bad ❌**
+
+```
+Can answer shipping.
+```
+
+**Good ✅**
+
+```
+Answer questions about shipping methods, costs, delivery times, and tracking numbers. If the user mentions "shipping", "delivery", or "tracking", delegate to me.
+```
+
+**Tips:**
+
+- Be explicit about what you cover.
+- Use keywords the user might mention.
+- Stick to clear, one-sentence statements—avoid fluff.
+
+## **Context-Aware Handoffs**
+
+Just like you can use context variables in the [instructions](https://docs.lookfor.ai/guides/prompt-engineering#personalizing-responses-with-context-variables) of an agent, you can also use context variables in the handoff description of a child agent. This is useful when you want to delegate to a child agent based on the context.
+
+See [Context Variables](https://docs.lookfor.ai/guides/context) for the full reference.
+
+
+
+<Note>
+**Note:** Not all MAS types support incoming handoffs.\
+**Content MAS** and **Insights MAS** run in the background and can’t receive handoffs—but they _can_ hand off results to a conversational MAS (e.g., Email MAS).
+</Note>
+
+
+
+## **Configuring Handoffs in the Dashboard**
+
+1. Create child agents with clear handoff descriptions
+2. Create a parent agent
+3. Assign child agents to the parent agent as handoff agents
+
+That’s it 🎉. When the parent agent is running, it will automatically delegate to the child agents based on the handoff descriptions.
+
+## **Best Practices**
+
+✅ **Single Responsibility** – One topic per agent\
+✅ **Clear Delegation Rules** – Help the LLM decide when to hand off\
+✅ **Avoid Long Chains** – No more than 3 handoff levels\
+✅ **Add Human Fallbacks** – Use LiveAgent for edge cases\
+✅ **Iterate Regularly** – Watch transcripts and adjust
