@@ -7,18 +7,22 @@ Multi-agent systems (MASs) are teams of [agents](/mas/agents) that collaborate t
 
 The **orchestration logic**—which agents run, in what order, and how decisions are made—is defined at the MAS level. The MAS uses LLM intelligence to reason through this flow using system instructions, handoffs, and tools.
 
+<Frame>
+  ![Screenshot 2025-11-20 at 18.17.17.png](/images/Screenshot2025-11-20at18.17.17.png)
+</Frame>
+
 ### You are in full control
 
-People often think lookfor provides a pre-defined agentic system. However, this is not what we do.  We very well know that each store has its own unique requirements. We can’t create a one-size-fits-all solution. Instead, what we provide is a framework and infrastructure that you can use to build and run your own MASs smoothly. 
+People often think lookfor provides a pre-defined agentic system. However, this is not what we do.  We very well know that each store has its own unique requirements. We can’t create a one-size-fits-all solution. Instead, what we provide is a framework and infrastructure that you can use to build and run your own MASs smoothly.
 
-### Creating a MAS 
+### Creating a MAS
 
-A MAS is actually nothing more than a container for agents. So most of the work to create a successfull MAS goes to [creating agents](agents#creating-agents). However, there are still some configurations you need to make for your MAS. 
+A MAS is actually nothing more than a container for agents. So most of the work to create a successfull MAS goes to [creating agents](agents#creating-agents). However, there are still some configurations you need to make for your MAS.
 
 - `Name` - The name of the MAS. It is used to identify the MAS in the dashboard.
 - `Type` - [The type of the MAS. ](#mas-types) It is set when you create a MAS and cannot be changed later.
-- `Entry Agent` - Every MAS must define one entry agent. That is, the agent who is the starting point of the execution. 
-- `System Instructions` - Optional high-level guidance to steer the overall behavior of the MAS. This applies to all agents in the MAS and superior to their own instructions. 
+- `Entry Agent` - Every MAS must define one entry agent. That is, the agent who is the starting point of the execution.
+- `System Instructions` - Optional high-level guidance to steer the overall behavior of the MAS. This applies to all agents in the MAS and superior to their own instructions.
 - **Type Specific Settings** - These settings are specific to the [type of the MAS](/mas/introduction#mas-types).
 
 ### **MAS Types**
