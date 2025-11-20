@@ -1,13 +1,13 @@
 ---
-title: "Context"
-description: "Description of your new file."
+title: "Context Variables"
+description: "Learn the basics of MAS context variables"
 ---
 
-# **Context management**
+### Overview
 
-Agents are equipped with a set of context. Context is a set of variables that are available to the agent. The context is different for each type of the MAS. For example storefront MAS has `customer.isLoggedIn` variable but an email MAS doesn’t have it becuase being logged in is not a concept in email. Every agent in a MAS has the same context provided while running, so they aware of them out of the box. However, you can refer to the context variables in the [instructions](/mas/instructions#personalizing-responses-with-context-variables) to achieve something specific.
+Context is a set of variables that are available to the MAS. In essence, there are certain information we expect to have when executing a MAS.(e.g. `name`, `country`, `IP Address`, `email` etc.) For each MAS type, information information likely to exist during execution is placed into context variables of that MAS. Thanks to that, you can use these variables in your [instructions](/mas/instructions#personalizing-responses-with-context-variables) to build your workflows. When available, variables will be replaced with their value during MAS execution. 
 
-## **Context Variables**
+### **Variables**
 
 The context variables are different for each type of the MAS. See the list of the context variables for each type:
 
