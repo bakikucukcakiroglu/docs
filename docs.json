@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "mint",
   "name": "Lookfor: AI CX Platform for Shopify",
   "colors": {
     "primary": "#6d28d9",
