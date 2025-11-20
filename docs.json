@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
-  "name": "Lookfor: AI CX Platform for Shopify",
+  "name": "Lookfor: Scalable CX Platform for high-growth Shopify brands",
   "colors": {
     "primary": "#6d28d9",
     "light": "#8b5cf6",
@@ -17,7 +17,8 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Get started",
+            "icon": "rocket",
             "pages": [
               "index",
               "quickstart",
@@ -39,6 +40,7 @@
           },
           {
             "group": "Channels",
+            "icon": "ethernet-port",
             "pages": [
               {
                 "group": "Storefront",
@@ -72,21 +74,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://www.lookfor.ai/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/dark.png",
@@ -97,6 +85,10 @@
       {
         "label": "Support",
         "href": "mailto:info@lookfor.ai"
+      },
+      {
+        "label": "blog",
+        "href": "https://www.lookfor.ai/blog"
       }
     ],
     "primary": {
