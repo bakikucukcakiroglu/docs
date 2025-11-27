@@ -1,37 +1,83 @@
 ---
 title: "Email"
-description: "Description of your new file."
+description: "Connect your email account to lookfor and automate your inbox with MAS."
 ---
 
-You can integrate your email with lookfor. We are currently supporting Gmail. If you want to use other email providers, please contact us.
+You can integrate your email accounts with **lookfor** to centralize all customer conversations and automate responses with MAS. We currently support two connection methods:
 
-## **How to automate emails?**
+- **Gmail OAuth** (only for Gmail / Google Workspace users, convenient but limited)
+- **Lookfor Subdomain Setup** (recommended for all providers, including Gmail — unlimited & highly reliable)
 
-### **Step 1: Connect your email to lookfor**
+<Info>
+  **Important:** Your customers will **continue sending emails to your original support email address**.\
+  With the Lookfor Subdomain Setup, you simply configure your email provider to _forward_ your incoming messages to lookfor. Replies sent by lookfor will originate from your **lookfor subdomain email** (e.g.,`support@yourstore.in.lookfor.ai`).
+</Info>
 
-1. Go to the **Settings/Channels/Email** page.
-2. Click on **Add Email** button.
-3. Select the email provider. (currently only Gmail is supported)
-4. Select the email address you want to connect to lookfor in the oAuth client.
-5. Give necessary permissions to the oAuth client.
-6. Yeeey! You have integrated your email with lookfor.
+## How to Automate Emails?
 
-Now you should see your email in **Settings/Channels/Email** page. After the successful connection, all your incoming/outgoing emails are stored in lookfor. You can go to **Inbox** page to see your emails. You can send manual responses there, assign an email conversation to a [member](https://docs.lookfor.ai/guides/others/members), or add tags to the email conversation.
+<Steps>
+  <Step title="Step 1: Connect your email to lookfor">
+    1. Go to **Settings → Channels → Email**.
+    2. Click **Add Email**.
+    3. Complete the connection process based on the connection method:
+       - **Gmail OAuth** → follow the [Gmail OAuth Setup](#gmail-oauth-setup)\
+         _(Convenient, but limited)_
+       - **Lookfor Subdomain Setup** → follow the [Lookfor Subdomain Setup](#lookfor-subdomain-setup)\
+         _(Recommended, unlimited, reliable)_
 
-### **Step 2: Create an email MAS**
+    <Check>
+      As soon as you connect your emails, all incoming ad outgoing emails starts to land in **Unified Inbox**.
+    </Check>
+  </Step>
+  <Step title="Step 2: Create an Email MAS">
+    1. Open the **MASs** page.
+    2. Click **Create new Email MAS**.
+    3. Configure your MAS and agents.
+  </Step>
+  <Step title="Step 3: Assign the Email MAS to an Email Integration">
+    1. Go to **Settings → Channels → Email**.
+    3. Assign the Email MAS you create to the email account you connected
 
-Now you can create an email MAS to answer inquiries coming from your email.
+    Your Email MAS will now automatically run **for every incoming email**.
+  </Step>
+</Steps>
 
-1. Go to the **MASs** page.
-2. Click on **Create new email MAS** button.
-3. Create agentt accordingly. See [Agents](https://docs.lookfor.ai/guides/agents) guide for more details.
-4. Yeeey! You have created an email MAS.
+## Gmail OAuth Setup
 
-### **Step 3: Assign the email MAS to an email integration**
+The easiest and fastest way to connect your Gmail inbox. However, Google enforces strict sending/reading limits — see Google’s official limits [here](https://support.google.com/a/answer/166852?hl=en&src=supportwidget0&authuser=0).
 
-1. Go to the **Settings/Channels/Email** page.
-2. Click on the email integration you want to assign the MAS to.
-3. Select the email MAS you want to assign to the email integration.
-4. Yeeey! You have assigned the email MAS to the email integration.
+**_Because of these limits, Gmail OAuth is not the recommended long-term method_**, especially for stores with moderate or high email volume.
 
-Now your email MAS will run once with every incoming email.
+### Steps
+
+1. Go to **Settings → Channels → Email**.
+2. Click **Add Email** → choose **Gmail**.
+3. Sign in with the Google account (Gmail or Google Workspace) you want to connect.
+4. Grant the necessary permissions (read, send, manage mail).
+5. You’re done — your Gmail inbox starts syncing immediately.
+
+## Lookfor Subdomain Setup
+
+This method works with any email provider (Outlook, Yahoo, Gmail, custom domains, etc.)\
+and has **no limits**, because lookfor handles sending/receiving using a subdomain you select like [support@yourstore.in.lookfor.ai](mailto:support@yourstore.in.lookfor.ai)
+
+You will configure email forwarding in your own provider so that **emails sent to your original support address** (e.g. `support@yourdomain.com`) are forwarded to lookfor.
+
+This means:
+
+- Customers keep using **your normal support email**
+- lookfor **receives** the forwarded emails
+- lookfor **replies** from `support@yourstore.in.lookfor.ai`with reply-to set as `THREAD_ID+support@yourstore.in.lookfor.ai`
+- Customer replies go back to that lookfor address → and the thread continues smoothly
+
+### Steps
+
+1. Go to **Settings → Channels → Email**.
+2. Click **Add Email** → select **Lookfor Subdomain Setup**.
+3. Choose a subdomain (e.g., `support@yourstore.in.lookfor.ai`) and click **Create Email Account**.\
+   This creates the email integration and automatically sets up the required DNS records.
+4. Wait for DNS propagation.\
+   You can check the status anytime by clicking **Validate**.
+5. In your original email provider, set up **email forwarding**\
+   (e.g., forward `support@yourdomain.com` → `support@yourstore.in.lookfor.ai`).
+6. Once DNS is valid and forwarding is active, lookfor will activate the integration and start receiving emails.
