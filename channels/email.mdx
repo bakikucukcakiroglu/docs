@@ -5,8 +5,8 @@ description: "Connect your email account to lookfor and automate your inbox with
 
 You can integrate your email accounts with **lookfor** to centralize all customer conversations and automate responses with MAS. We currently support two connection methods:
 
-- **Gmail OAuth** (only for Gmail / Google Workspace users, convenient but limited)
-- **Lookfor Subdomain Setup** (recommended for all providers, including Gmail — unlimited & highly reliable)
+- **Gmail OAuth** — only for Gmail/Google Workspace users. Easy to set up but limited by Google’s sending and reading quotas.
+- **Lookfor Subdomain Setup** — recommended for all providers, including Gmail. Fully reliable with no limits.
 
 ## How to Automate Emails?
 
@@ -14,65 +14,70 @@ You can integrate your email accounts with **lookfor** to centralize all custome
   <Step title="Step 1: Connect your email to lookfor">
     1. Go to **Settings → Channels → Email**.
     2. Click **Add Email**.
-    3. Complete the connection process based on the connection method:
-       - **Gmail OAuth** → follow the [Gmail OAuth Setup](#gmail-oauth-setup)\
-         _(Convenient, but limited)_
-       - **Lookfor Subdomain Setup** → follow the [Lookfor Subdomain Setup](#lookfor-subdomain-setup)\
+    3. Choose and complete a connection method:
+       - **Gmail OAuth** → see the [Gmail OAuth Setup](#gmail-oauth-setup)\
+         _(Convenient but limited)_
+       - **Lookfor Subdomain Setup** → see the [Lookfor Subdomain Setup](#lookfor-subdomain-setup)\
          _(Recommended, unlimited, reliable)_
 
     <Check>
-      As soon as you connect your emails, all incoming ad outgoing emails starts to land in **Unified Inbox**. 
+      Once your email is connected, all messages immediately begin appearing in the **Unified Inbox**.  
+      Even before automation is enabled, you can use Unified Inbox as a full-featured email client for that account.
     </Check>
   </Step>
+
   <Step title="Step 2: Create an Email MAS">
-    1. Open the **MASs** page.
+    1. Go to the **MASs** page.
     2. Click **Create new Email MAS**.
-    3. Configure your MAS and agents.
+    3. Configure your MAS and its agents as needed.
   </Step>
+
   <Step title="Step 3: Assign the Email MAS to an Email Integration">
     1. Go to **Settings → Channels → Email**.
-    3. Assign the Email MAS you create to the email account you connected
+    2. Open the email integration you connected.
+    3. Assign the Email MAS you created.
 
-    Your Email MAS will now automatically run **for every incoming email**.
+    After assignment, the MAS will automatically run for every incoming email on that integration.
   </Step>
 </Steps>
 
 ## Gmail OAuth Setup
 
-The easiest and fastest way to connect your Gmail inbox. However, Google enforces strict sending/reading limits — see Google’s official limits [here](https://support.google.com/a/answer/166852?hl=en&src=supportwidget0&authuser=0).
+Gmail OAuth is the quickest way to connect a Gmail or Google Workspace inbox.  
+However, Google enforces strict daily sending and reading limits. You can review these limits [here](<https://support.google.com/a/answer/166852?hl=en>)  
 
-**_Because of these limits, Gmail OAuth is not the recommended long-term method_**, especially for stores with moderate or high email volume.
+Because of these quotas, Gmail OAuth is not ideal for stores with medium or high email volume.
 
 ### Steps
 
 1. Go to **Settings → Channels → Email**.
 2. Click **Add Email** → choose **Gmail**.
-3. Sign in with the Google account (Gmail or Google Workspace) you want to connect.
-4. Grant the necessary permissions (read, send, manage mail).
-5. You’re done — your Gmail inbox starts syncing immediately.
+3. Sign in with your Gmail or Google Workspace account.
+4. Grant the required permissions (read, send, manage mail).
+5. Your Gmail inbox will begin syncing immediately.
 
 ## Lookfor Subdomain Setup
 
-This method works with any email provider (Outlook, Yahoo, Gmail, custom domains, etc.)\
-and has **no limits**, because lookfor handles sending/receiving using a subdomain you select like [support@yourstore.in.lookfor.ai](mailto:support@yourstore.in.lookfor.ai)
+This method works with any email provider (Gmail, Outlook, Yahoo, IONOS, custom domain hosts, etc.) and has **no limits**, because lookfor sends and receives mail through a subdomain you select, such as `support@yourstore.in.lookfor.ai`.
 
-You will configure email forwarding in your own provider so that **emails sent to your original support address** (e.g. `support@yourdomain.com`) are forwarded to lookfor.
+Your original support address (e.g., `support@yourdomain.com`) remains the public address your customers see.  
+You simply configure your current email provider to **forward incoming emails** to your new lookfor subdomain address.
 
-This means:
+lookfor will:
 
-- Customers keep using **your normal support email**
-- lookfor **receives** the forwarded emails
-- lookfor **replies** from `support@yourstore.in.lookfor.ai`with reply-to set as `THREAD_ID+support@yourstore.in.lookfor.ai`
-- Customer replies go back to that lookfor address → and the thread continues smoothly
+- Receive all forwarded messages.
+- Reply from your subdomain address (e.g., `support@yourstore.in.lookfor.ai`).
+- Use a unique reply-to address like `THREAD_ID+support@yourstore.in.lookfor.ai` to preserve conversation threads.
+- Automatically route all customer replies into the correct thread in your Unified Inbox.
 
 ### Steps
 
 1. Go to **Settings → Channels → Email**.
 2. Click **Add Email** → select **Lookfor Subdomain Setup**.
-3. Choose a subdomain (e.g., `support@yourstore.in.lookfor.ai`) and click **Create Email Account**.\
-   This creates the email integration and automatically sets up the required DNS records.
-4. Wait for DNS propagation.\
-   You can check the status anytime by clicking **Validate**.
-5. In your original email provider, set up **email forwarding**\
+3. Choose a subdomain (e.g., `support@yourstore.in.lookfor.ai`) and click **Create Email Account**.  
+   This creates the email integration and automatically generates the required DNS records.
+4. Wait for DNS propagation.  
+   You can check the current status anytime by clicking **Validate** inside the integration.
+5. In your original email provider, configure **email forwarding**  
    (e.g., forward `support@yourdomain.com` → `support@yourstore.in.lookfor.ai`).
-6. Once DNS is valid and forwarding is active, lookfor will activate the integration and start receiving emails.
+6. When DNS is valid and forwarding is active, lookfor will activate the integration and begin receiving emails.
