@@ -20,7 +20,6 @@
             "group": "Get started",
             "icon": "rocket",
             "pages": [
-              "index",
               "quickstart",
               "why-lookfor"
             ]
@@ -46,39 +45,22 @@
               }
             ]
           },
+         {
+            "group": "Campaigns",
+            "icon": "megaphone",
+            "pages": [
+              "campaigns/introduction"
+            ]
+          },
           {
             "group": "Channels",
             "icon": "ethernet-port",
             "pages": [
               "channels/introduction",
-              {
-                "group": "Storefront",
-                "icon": "store",
-                "pages": [
-                  "channels/storefront"
-                ]
-              },
-              {
-                "group": "Email",
-                "icon": "mail",
-                "pages": [
-                  "channels/email"
-                ]
-              },
-              {
-                "group": "Instagram",
-                "icon": "instagram",
-                "pages": [
-                  "channels/instagram"
-                ]
-              },
-              {
-                "group": "Facebook",
-                "icon": "facebook",
-                "pages": [
-                  "channels/facebook"
-                ]
-              }
+              "channels/storefront",
+              "channels/email",
+              "channels/instagram",
+              "channels/facebook"
             ]
           }
         ]
