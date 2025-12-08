@@ -20,8 +20,8 @@
             "group": "Get started",
             "icon": "rocket",
             "pages": [
-              "quickstart",
-              "why-lookfor"
+              "index",
+              "quickstart"
             ]
           },
           {

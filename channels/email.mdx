@@ -1,6 +1,6 @@
 ---
-title: "Email"
-description: "Connect your email account to lookfor and automate your inbox with MAS."
+title: "Email (inbound + outbound)"
+description: "Connect your email accounts to automate inbound and create outbound campaigns"
 ---
 
 You can integrate your email accounts with **lookfor** to centralize all customer conversations and automate responses with MAS. We currently support two connection methods:
@@ -21,17 +21,15 @@ You can integrate your email accounts with **lookfor** to centralize all custome
          _(Recommended, unlimited, reliable)_
 
     <Check>
-      Once your email is connected, all messages immediately begin appearing in the **Unified Inbox**.  
+      Once your email is connected, all messages immediately begin appearing in the **Unified Inbox**.\
       Even before automation is enabled, you can use Unified Inbox as a full-featured email client for that account.
     </Check>
   </Step>
-
   <Step title="Step 2: Create an Email MAS">
     1. Go to the **MASs** page.
     2. Click **Create new Email MAS**.
     3. Configure your MAS and its agents as needed.
   </Step>
-
   <Step title="Step 3: Assign the Email MAS to an Email Integration">
     1. Go to **Settings → Channels → Email**.
     2. Open the email integration you connected.
@@ -43,8 +41,8 @@ You can integrate your email accounts with **lookfor** to centralize all custome
 
 ## Gmail OAuth Setup
 
-Gmail OAuth is the quickest way to connect a Gmail or Google Workspace inbox.  
-However, Google enforces strict daily sending and reading limits. You can review these limits [here](<https://support.google.com/a/answer/166852?hl=en>)  
+Gmail OAuth is the quickest way to connect a Gmail or Google Workspace inbox.\
+However, Google enforces strict daily sending and reading limits. You can review these limits [here](https://support.google.com/a/answer/166852?hl=en)
 
 Because of these quotas, Gmail OAuth is not ideal for stores with medium or high email volume.
 
@@ -60,7 +58,7 @@ Because of these quotas, Gmail OAuth is not ideal for stores with medium or high
 
 This method works with any email provider (Gmail, Outlook, Yahoo, IONOS, custom domain hosts, etc.) and has **no limits**, because lookfor sends and receives mail through a subdomain you select, such as `support@yourstore.in.lookfor.ai`.
 
-Your original support address (e.g., `support@yourdomain.com`) remains the public address your customers see.  
+Your original support address (e.g., `support@yourdomain.com`) remains the public address your customers see.\
 You simply configure your current email provider to **forward incoming emails** to your new lookfor subdomain address.
 
 lookfor will:
@@ -74,10 +72,10 @@ lookfor will:
 
 1. Go to **Settings → Channels → Email**.
 2. Click **Add Email** → select **Lookfor Subdomain Setup**.
-3. Choose a subdomain (e.g., `support@yourstore.in.lookfor.ai`) and click **Create Email Account**.  
+3. Choose a subdomain (e.g., `support@yourstore.in.lookfor.ai`) and click **Create Email Account**.\
    This creates the email integration and automatically generates the required DNS records.
-4. Wait for DNS propagation.  
+4. Wait for DNS propagation.\
    You can check the current status anytime by clicking **Validate** inside the integration.
-5. In your original email provider, configure **email forwarding**  
+5. In your original email provider, configure **email forwarding**\
    (e.g., forward `support@yourdomain.com` → `support@yourstore.in.lookfor.ai`).
 6. When DNS is valid and forwarding is active, lookfor will activate the integration and begin receiving emails.
