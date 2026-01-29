@@ -28,7 +28,6 @@
             "group": "Multi-agent Systems (MAS)",
             "icon": "component",
             "pages": [
-              "guides/multi-agent-systems-mas/knowledge",
               "mas/introduction",
               "mas/agents",
               "mas/context",
@@ -43,7 +42,8 @@
                   "mas/tools/api",
                   "mas/tools/mcp"
                 ]
-              }
+              },
+              "guides/multi-agent-systems-mas/knowledge"
             ]
           },
           {
