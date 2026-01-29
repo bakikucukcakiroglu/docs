@@ -28,6 +28,7 @@
             "group": "Multi-agent Systems (MAS)",
             "icon": "component",
             "pages": [
+              "guides/multi-agent-systems-mas/knowledge",
               "mas/introduction",
               "mas/agents",
               "mas/context",
@@ -45,7 +46,7 @@
               }
             ]
           },
-         {
+          {
             "group": "Campaigns",
             "icon": "megaphone",
             "pages": [
@@ -76,7 +77,7 @@
               "use-cases/overview/templates"
             ]
           },
-           {
+          {
             "group": "Discovered Use Cases",
             "icon": "combine",
             "pages": [
@@ -160,7 +161,6 @@
           }
         ]
       }
-      
     ]
   },
   "logo": {
