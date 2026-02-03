@@ -10,7 +10,7 @@
   "icons":{
     "library": "lucide"
   },
-  "favicon": "/favicon.ico",
+  "favicon": "/images/favicon.ico",
   "navigation": {
     "tabs": [
       {
