@@ -3,7 +3,9 @@
   "theme": "aspen",
   "name": "Lookfor: Scalable CX Platform for high-growth Shopify brands",
   "colors": {
-    "primary": "#7522E8"
+    "primary": "#7522E8",
+    "light": "#7522E8",
+    "dark": "#7522E8"
   },
   "icons":{
     "library": "lucide"
